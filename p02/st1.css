@@ -1,0 +1,83 @@
+:root {
+            --bg-color: #121212;
+            --surface-color: #1f1f1f;
+            --text-color: #e0e0e0;
+            --primary-color: #bb86fc;
+            --primary-dark-color: #9f6ee0;
+            --secondary-text-color: #a0a0a0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            width: 320px;
+            max-width: 90%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            color: var(--primary-color);
+            margin: 10px 0;
+            font-size: 2.5em;
+            word-break: break-all;
+        }
+        .container h3 {
+            color: var(--secondary-text-color);
+            margin-top: 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px 15px;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            color: var(--bg-color);
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s;
+        }
+        button:hover {
+            background-color: var(--primary-dark-color);
+            transform: translateY(-1px);
+        }
+        .page-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%; 
+            background-color: #000;
+            border-top: 1px solid #333;
+            display: flex; 
+            justify-content: center;
+            z-index: 100; 
+            padding: 5px 0;
+        }
+        .page-footer button {
+            background-color: transparent;
+            color: var(--secondary-text-color);
+            border-radius: 0;
+            width: auto;
+            padding: 10px 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .page-footer button:hover {
+            background-color: #1f1f1f; 
+            color: var(--text-color);
+            transform: none;
+        }
