@@ -1,0 +1,142 @@
+
+        :root {
+            --bg-dark: #0f0f0f;        /* Более глубокий темный */
+            --bg-card: #1a1a1a;       /* Цвет карточки */
+            --accent-purple: #9d4edd; /* Яркий фиолетовый */
+            --text-main: #ffffff;
+            --text-dim: #999999;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Чтобы футер всегда был внизу */
+        }
+
+        /* Компактный Хедер */
+        header {
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+            background-color: #121212;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            text-transform: lowercase; /* Стиль duracellrabbit's */
+        }
+
+        /* Блок приветствия */
+        .intro {
+            max-width: 800px;
+            margin: 40px auto 10px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: var(--text-dim);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        /* Сетка проектов */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex: 1; /* Позволяет сетке занимать всё свободное место */
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+            border: 1px solid #222;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+            box-shadow: 0 10px 30px rgba(157, 78, 221, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 15px;
+        }
+
+        .card-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+            color: var(--accent-purple);
+        }
+
+        .card-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* Футер */
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+            margin-top: 50px;
+        }
+
+        .tg-link {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: rgba(157, 78, 221, 0.1);
+        }
+
+        .tg-link:hover {
+            background: var(--accent-purple);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .intro h2 { font-size: 1.5rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
